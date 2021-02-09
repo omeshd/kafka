@@ -54,6 +54,11 @@ public class UserManagementApplicationServiceImpl implements UserManagementAppli
         logMap.put(LoggingEventField.USERNAME, updateUserRQ.getFirstName());
         logMap.put(LoggingEventField.PHONE, updateUserRQ.getLastName());
         LoggingUtil.logInfo(logger, "Create user start.", logMap, LoggingEvent.CREATE_USER);
+
+        String Name;
+        if (null != Name) {
+            System.out.println("Name is null");
+        }
     }
 
     @Override
