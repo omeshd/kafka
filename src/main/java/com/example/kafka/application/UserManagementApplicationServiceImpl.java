@@ -50,6 +50,10 @@ public class UserManagementApplicationServiceImpl implements UserManagementAppli
     @Override
     public void updateUser(UpdateUserRQ updateUserRQ, String userId) {
 
+        Map<String, String> logMap = new HashMap<String, String>();
+        logMap.put(LoggingEventField.USERNAME, updateUserRQ.getFirstName());
+        logMap.put(LoggingEventField.PHONE, updateUserRQ.getLastName());
+        LoggingUtil.logInfo(logger, "Create user start.", logMap, LoggingEvent.CREATE_USER);
     }
 
     @Override
